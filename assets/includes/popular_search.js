@@ -40,7 +40,7 @@ $(
 
             console.log(genre, titleType, minVotes);
 
-            if (genre == null || titleTable == null)
+            if (genre == null || titleType == null)
                 return;
             if (isNaN(minVotes) || minVotes < 1000)
                 minVotes = 1000;

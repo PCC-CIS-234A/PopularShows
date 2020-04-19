@@ -11,7 +11,7 @@ class Database
     const GET_ALL_TITLE_TYPES_SQL = "SELECT DISTINCT RTRIM(titleType) AS titleType FROM title_basics;";
     const FIND_SHOWS_SQL = <<<QUERY
 SELECT      TOP 50 
-            primaryTitle, startYear, averageRating, numVotes\n
+            primaryTitle, startYear, averageRating, numVotes
 FROM        title_basics
 JOIN        title_ratings ON title_basics.tconst = title_ratings.tconst
 JOIN        title_genre ON title_basics.tconst = title_genre.tconst
