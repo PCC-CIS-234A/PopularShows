@@ -59,6 +59,11 @@ QUERY;
             ":title_type" => $title_type,
             ":genre" => $genre
         ]);
-        return $stmt->fetchAll(PDO::FETCH_ASSOC);
+        $shows = $stmt->fetchAll(PDO::FETCH_ASSOC);
+        $showList = [];
+        foreach ($shows as $show) {
+            $showList[] = new Show($show);
+        }
+        return $showList;
     }
 }
